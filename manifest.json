@@ -1,0 +1,11 @@
+{
+  "name": "Engineer_Turret_Taunt",
+  "description": "Let your turrets emote / taunt with you whenever you emote!",
+  "version_number": "0.1.0",
+  "dependencies": [
+    "bbepis-BepInExPack-5.4.2113",
+    "tristanmcpherson-R2API-5.0.5",
+    "Rune580-Risk_Of_Options-2.7.0",
+    "MetrosexualFruitcake-CustomEmotesAPI-2.1.5"
+  ]
+}
