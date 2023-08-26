@@ -4,8 +4,8 @@
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 # Symlinks leading to game and mod files
-api/
-bepinex/
+api
+bepinex
 
 # User-specific files
 *.rsuser

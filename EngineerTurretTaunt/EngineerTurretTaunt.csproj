@@ -9,6 +9,8 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>EngineerTurretTaunt</RootNamespace>
     <AssemblyName>EngineerTurretTaunt</AssemblyName>
+    <!-- Edit these paths to make them point to the directions if necessary. -->
+    <!-- But make sure to change these back to the original values when making a pull request! -->
     <RoRDir>../api</RoRDir>
     <BepInExDir>../bepinex</BepInExDir>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
