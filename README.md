@@ -16,4 +16,4 @@ A mod that makes your turrets emote with you! Also supports the option to make A
 
 ###### (This is only for editing the code and playtesting the mod if you wanna make a contribution to the mod's code.)
 
-To see the build instructions, click [here](./BUILD.md)
+To see the build instructions, click [here](https://github.com/KaanGaming/EngineerTurretTaunt/blob/master/BUILD.md)
