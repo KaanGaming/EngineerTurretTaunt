@@ -1,7 +1,7 @@
 {
   "name": "Engineer_Turret_Taunt",
   "description": "Let your turrets emote / taunt with you whenever you emote!",
-  "version_number": "0.2.0",
+  "version_number": "0.2.1",
   "website_url": "https://github.com/KaanGaming/EngineerTurretTaunt",
   "dependencies": [
     "bbepis-BepInExPack-5.4.2113",

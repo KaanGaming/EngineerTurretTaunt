@@ -23,7 +23,7 @@ namespace EngineerTurretTaunt
 {
 	[BepInDependency("com.bepis.r2api")]
 	[BepInDependency("com.weliveinasociety.CustomEmotesAPI")]
-	[BepInPlugin("com.kanggamming.EngineerTurretTaunt", "Engineer Turret Taunt", "0.2.0")]
+	[BepInPlugin("com.kanggamming.EngineerTurretTaunt", "Engineer Turret Taunt", "0.2.1")]
 	[R2APISubmoduleDependency("NetworkingAPI")]
     public class EngineerTurretTauntPlugin : BaseUnityPlugin
     {

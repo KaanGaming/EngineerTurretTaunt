@@ -1,5 +1,9 @@
 ﻿### Changelog
 
+# Version 0.2.1
+
+* Fixed issue [#1: NRE spam](https://github.com/KaanGaming/EngineerTurretTaunt/issues/1)
+
 # Version 0.2.0
 
 * Added a few keybind options to let the player control themselves and their allies
