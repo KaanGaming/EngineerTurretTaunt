@@ -89,29 +89,32 @@ namespace EngineerTurretTaunt
 
 		public void Update()
 		{
-			CharacterBody soloTarget = NetworkUser.readOnlyLocalPlayersList[0].master.GetBody();
-			if (stopEmotingSolo.Value.IsDown())
+			if (Run.instance != null)
 			{
-				SendAnimation(soloTarget, "none");
-			}
-			if (joinEmoteSolo.Value.IsDown())
-			{
-				JoinAnimation(soloTarget);
-			}
-			if (stopEmotingAllies.Value.IsDown())
-			{
-				var targets = GetAllyTargets(soloTarget, allAlliesEmote.Value);
-				for (int i = 0; i < targets.Count; i++)
+				CharacterBody soloTarget = NetworkUser.readOnlyLocalPlayersList[0].master.GetBody();
+				if (stopEmotingSolo.Value.IsDown())
 				{
-					SendAnimation(targets[i], "none");
+					SendAnimation(soloTarget, "none");
 				}
-			}
-			if (joinEmoteAllies.Value.IsDown())
-			{
-				var targets = GetAllyTargets(soloTarget, allAlliesEmote.Value);
-				for (int i = 0; i < targets.Count; i++)
+				if (joinEmoteSolo.Value.IsDown())
 				{
-					JoinAnimation(targets[i]);
+					JoinAnimation(soloTarget);
+				}
+				if (stopEmotingAllies.Value.IsDown())
+				{
+					var targets = GetAllyTargets(soloTarget, allAlliesEmote.Value);
+					for (int i = 0; i < targets.Count; i++)
+					{
+						SendAnimation(targets[i], "none");
+					}
+				}
+				if (joinEmoteAllies.Value.IsDown())
+				{
+					var targets = GetAllyTargets(soloTarget, allAlliesEmote.Value);
+					for (int i = 0; i < targets.Count; i++)
+					{
+						JoinAnimation(targets[i]);
+					}
 				}
 			}
 		}
