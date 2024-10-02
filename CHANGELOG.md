@@ -1,5 +1,9 @@
 ﻿### Changelog
 
+# Version 0.2.2
+
+* Fix for Risk of Rain 2: Seekers of the Storm update
+
 # Version 0.2.1
 
 * Fixed issue [#1: NRE spam](https://github.com/KaanGaming/EngineerTurretTaunt/issues/1)
