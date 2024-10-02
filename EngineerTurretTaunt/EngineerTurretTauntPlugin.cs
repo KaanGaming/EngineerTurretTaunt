@@ -77,7 +77,7 @@ namespace EngineerTurretTaunt
 
 		private void OpenBMCLink()
 		{
-			Process.Start("https://buymeacoffee.com/kaangamgimginnkagnagnking");
+			 Application.OpenURL("https://buymeacoffee.com/kaangamgimginnkagnagnking");
 		}
 
 		private IDetour _playAnimHook;
