@@ -74,8 +74,8 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>$(RoRDir)\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="R2API, Version=4.3.5.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\R2API.4.3.5\lib\netstandard2.0\R2API.dll</HintPath>
+    <Reference Include="R2API, Version=5.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\R2API.5.0.5\lib\netstandard2.0\R2API.dll</HintPath>
     </Reference>
     <Reference Include="Rewired_Core">
       <HintPath>$(RoRDir)\Rewired_Core.dll</HintPath>
@@ -349,6 +349,9 @@
       <HintPath>$(BepInExDir)\core\BepInEx.dll</HintPath>
     </Reference>
     <Reference Include="RiskOfOptions">
+      <HintPath>$(BepInExDir)\plugins\Rune580-Risk_Of_Options\RiskOfOptions\RiskOfOptions.dll</HintPath>
+    </Reference>
+    <Reference Include="RiskOfOptions">
       <HintPath>$(BepInExDir)\plugins\Rune580-Risk_Of_Options\RiskOfOptions.dll</HintPath>
     </Reference>
     <Reference Include="CustomEmotesAPI">
@@ -356,6 +359,12 @@
     </Reference>
     <Reference Include="MMHOOK_RoR2">
       <HintPath>$(BepInExDir)\plugins\MMHOOK\MMHOOK_RoR2.dll</HintPath>
+    </Reference>
+    <Reference Include="R2API.Core">
+      <HintPath>$(BepInExDir)\plugins\RiskofThunder-R2API_Core\R2API.Core\R2API.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="R2API.Networking">
+      <HintPath>$(BepInExDir)\plugins\RiskofThunder-R2API_Networking\R2API.Networking\R2API.Networking.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

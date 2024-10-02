@@ -10,12 +10,22 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.gitignore = .gitignore
 		BUILD.md = BUILD.md
 		CHANGELOG.md = CHANGELOG.md
-		LICENSE = LICENSE
 		manifest.json = manifest.json
+		LICENSE.txt = LICENSE.txt
 		README.md = README.md
 	EndProjectSection
 	ProjectSection(FolderGlobals) = preProject
 		G_5_4kaan_4Projeler_4EngineerTurretTaunt_4manifest_1json__JsonSchema = 
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ThunderstoreManifest", "ThunderstoreManifest", "{87D1583C-50CA-4288-9035-B413198046A4}"
+	ProjectSection(SolutionItems) = preProject
+		EngineerTurretTaunt\ThunderstoreManifest\BUILD.md = EngineerTurretTaunt\ThunderstoreManifest\BUILD.md
+		EngineerTurretTaunt\ThunderstoreManifest\CHANGELOG.md = EngineerTurretTaunt\ThunderstoreManifest\CHANGELOG.md
+		EngineerTurretTaunt\ThunderstoreManifest\icon.png = EngineerTurretTaunt\ThunderstoreManifest\icon.png
+		EngineerTurretTaunt\ThunderstoreManifest\LICENSE.txt = EngineerTurretTaunt\ThunderstoreManifest\LICENSE.txt
+		EngineerTurretTaunt\ThunderstoreManifest\manifest.json = EngineerTurretTaunt\ThunderstoreManifest\manifest.json
+		EngineerTurretTaunt\ThunderstoreManifest\README.md = EngineerTurretTaunt\ThunderstoreManifest\README.md
 	EndProjectSection
 EndProject
 Global
@@ -31,6 +41,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{87D1583C-50CA-4288-9035-B413198046A4} = {9A513457-DBF3-45C9-9540-9E7DF51ECCD5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {66952229-407C-4799-9332-0316FBCCAF2C}

@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using BepInEx;
 using MonoMod.RuntimeDetour;
-using R2API;
 using RiskOfOptions.OptionConfigs;
 using RiskOfOptions.Options;
 using RiskOfOptions;
@@ -18,13 +17,14 @@ using System.Collections.ObjectModel;
 using R2API.Networking;
 using R2API.Networking.Interfaces;
 using R2API.Utils;
+using System.Diagnostics;
 
 namespace EngineerTurretTaunt
 {
 	[BepInDependency("com.bepis.r2api")]
+	[BepInDependency("com.rune580.riskofoptions")]
 	[BepInDependency("com.weliveinasociety.CustomEmotesAPI")]
-	[BepInPlugin("com.kanggamming.EngineerTurretTaunt", "Engineer Turret Taunt", "0.2.0")]
-	[R2APISubmoduleDependency("NetworkingAPI")]
+	[BepInPlugin("com.kanggamming.EngineerTurretTaunt", "Engineer Turret Taunt", "0.2.2")]
     public class EngineerTurretTauntPlugin : BaseUnityPlugin
     {
 		public EngineerTurretTauntPlugin()
@@ -42,11 +42,42 @@ namespace EngineerTurretTaunt
 			_playAnimHook = new Hook((PlayAnimationOrig)CustomEmotesAPI.PlayAnimation, (PlayAnimationHandler)OnPlayAnimation);
 
 			ModSettingsManager.SetModDescription("A mod that makes your turrets taunt/emote with you. Need I say more?");
-			ModSettingsManager.AddOption(new CheckBoxOption(allAlliesEmote));
-			ModSettingsManager.AddOption(new KeyBindOption(stopEmotingSolo));
-			ModSettingsManager.AddOption(new KeyBindOption(stopEmotingAllies));
-			ModSettingsManager.AddOption(new KeyBindOption(joinEmoteSolo));
-			ModSettingsManager.AddOption(new KeyBindOption(joinEmoteAllies));
+			ModSettingsManager.AddOption(new CheckBoxOption(allAlliesEmote, new CheckBoxConfig
+			{
+				category = "General",
+				description = "Whether all of your allies will taunt/emote with you. (Does not make other players or their allies taunt.)",
+				name = "All Allies Emote"
+			}));
+			ModSettingsManager.AddOption(new KeyBindOption(stopEmotingSolo, new KeyBindConfig
+			{
+				category = "General",
+				description = "Keybind to make only yourself stop emoting.",
+				name = "Stop emoting (yourself)"
+			}));
+			ModSettingsManager.AddOption(new KeyBindOption(stopEmotingAllies, new KeyBindConfig
+			{
+				category = "General",
+				description = "Keybind to make only your allies stop emoting.",
+				name = "Stop emoting (allies only)"
+			}));
+			ModSettingsManager.AddOption(new KeyBindOption(joinEmoteSolo, new KeyBindConfig
+			{
+				category = "General",
+				description = "Keybind to join a Join Spot without making your allies join with you. (alternatively you can just press Sync With Nearest Emote in the original mod)",
+				name = "Join emote spot (yourself)"
+			}));
+			ModSettingsManager.AddOption(new KeyBindOption(joinEmoteAllies, new KeyBindConfig
+			{
+				category = "General",
+				description = "Keybind to make only your allies join a Join Spot or sync with you. Only allies within the Join Spot will join your emote. If it's a non-join emote, the allies will instead sync with your emote. (the join spot can be a little jank)",
+				name = "Join emote spot (allies only)"
+			}));
+			//ModSettingsManager.AddOption(new GenericButtonOption("bmcbutton", "General", "Supporting me helps me develop more mods and other types of projects, and it's low cost, for only $2 for a single coffee! Thank you for your heartfelt consideration to support me and my work! <3", "Buy me a coffee! <3", OpenBMCLink));
+		}
+
+		private void OpenBMCLink()
+		{
+			Process.Start("https://buymeacoffee.com/kaangamgimginnkagnagnking");
 		}
 
 		private IDetour _playAnimHook;
